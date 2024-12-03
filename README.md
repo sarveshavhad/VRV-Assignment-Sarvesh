@@ -48,11 +48,14 @@ Ensure you have the following installed:
 4. Create a .env file in the root directory with the following:
 
     PORT=7001
+   
     JWT=Your_JWT_Token
+   
     JWT_REFRESH_SECRET=Your_Refresh_Token
+   
     CONNECTION_STRING= Mongo_Connection_String
 
-5. Start the MongoDB server if not running already.
+6. Start the MongoDB server if not running already.
 
 ---
 
