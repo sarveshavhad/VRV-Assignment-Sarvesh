@@ -115,22 +115,24 @@ const logout = async (req, res) => {
     }
 };
 // Update User Role (Admin-only functionality)
+// Update Role by Username
 const updateRole = async (req, res) => {
-    const { role } = req.body;
-    const userId = req.params.userId;
-
-    // Validate the role
-    const validRoles = ["admin", "user", "manager"];
-    if (!validRoles.includes(role)) {
-        return res.status(400).json({ message: "Invalid role provided" });
-    }
-
-    // Get permissions for the new role
-    const permissions = assignPermissions(role);
-
     try {
-        const user = await User.findByIdAndUpdate(
-            userId,
+        const { role } = req.body;
+        const { username } = req.params;
+
+        // Validate the role
+        const validRoles = ["admin", "user", "manager"];
+        if (!validRoles.includes(role)) {
+            return res.status(400).json({ message: "Invalid role provided" });
+        }
+
+        // Assign permissions for the role
+        const permissions = assignPermissions(role);
+
+        // Update the user role
+        const user = await User.findOneAndUpdate(
+            { username },
             { role, permissions },
             { new: true }
         );
@@ -141,6 +143,7 @@ const updateRole = async (req, res) => {
 
         res.status(200).json({ message: "Role updated successfully", user });
     } catch (err) {
+        console.error(err); // Log the error for debugging
         res.status(500).json({ message: "Failed to update role", error: err.message });
     }
 };
