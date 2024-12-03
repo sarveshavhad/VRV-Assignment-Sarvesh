@@ -37,21 +37,22 @@ Ensure you have the following installed:
 1. Clone the repository:
   
     git clone https://github.com/sarveshavhad/VRV-Assignment-Sarvesh.git
+   
     cd VRV-Assignment-Sarvesh
 
-2. Install dependencies:
+3. Install dependencies:
   
     Copy code
     npm install
 
-3. Create a .env file in the root directory with the following:
+4. Create a .env file in the root directory with the following:
 
     PORT=7001
     JWT=Your_JWT_Token
     JWT_REFRESH_SECRET=Your_Refresh_Token
     CONNECTION_STRING= Mongo_Connection_String
 
-4. Start the MongoDB server if not running already.
+5. Start the MongoDB server if not running already.
 
 ---
 
