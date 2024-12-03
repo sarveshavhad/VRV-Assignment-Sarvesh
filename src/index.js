@@ -7,17 +7,13 @@ const authRoutes = require("./routes/authRoutes");
 const app = express();
 dbConnect();
 
-// Enable CORS
-app.use(
-    cors({
-        origin: "http://localhost:3000", // Allow requests from your frontend
-        methods: ["GET", "POST", "PUT", "DELETE"], // Specify allowed methods
-        credentials: true, // If you need to allow cookies
-    })
-);
 
 // Middleware to parse JSON
 app.use(express.json());
+
+app.get("/", (req, res) => {
+    res.send("Hello everyone");
+});
 
 // Routes
 app.use("/api/auth", authRoutes);
