@@ -42,18 +42,14 @@ Ensure you have the following installed:
 
 3. Install dependencies:
   
-    Copy code
-    npm install
+   npm install
 
 4. Create a .env file in the root directory with the following:
 
-    PORT=7001
-   
-    JWT=Your_JWT_Token
-   
-    JWT_REFRESH_SECRET=Your_Refresh_Token
-   
-    CONNECTION_STRING= Mongo_Connection_String
+    -PORT=7001   
+    -JWT=Your_JWT_Token   
+    -JWT_REFRESH_SECRET=Your_Refresh_Token   
+    -CONNECTION_STRING= Mongo_Connection_String
 
 6. Start the MongoDB server if not running already.
 
@@ -62,8 +58,7 @@ Ensure you have the following installed:
 ## How to Run
 
 1. Start the server:
-
-  Copy code
+   
   npm start
 
 2. The server will start at http://localhost:7001.
