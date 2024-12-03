@@ -93,62 +93,59 @@ You can use Postman or a similar API client to test the API endpoints. Ensure to
 
 ## Usage with Postman
 ### 1. Register a User
-    Endpoint: POST /api/auth/register
+    - Endpoint: POST /api/auth/register
 
-    Body:
-    ```JSON
-    {
-      "username": "testuser",
-      "password": "password123",
-      "role": "user"
-    }
-   
+    - Body:   
+         {
+         "username": "testuser",
+         "password": "password123",
+         "role": "user"
+         }
+      
 ### 2. Login
-    Endpoint: POST /api/auth/login  
+    - Endpoint: POST /api/auth/login  
 
-    Body: 
-      {
-        "username": "testuser",
-        "password": "password123"
-      }
-    Response: JWT token for authenticated access.
-
+    - Body: 
+         {
+           "username": "testuser",
+           "password": "password123"
+         }
+    
 ### 3. Refresh Token
-    Endpoint: POST /api/auth/refresh-token
+    - Endpoint: POST /api/auth/refresh-token
 
-    Headers:  
+    - Headers:  
         Authorization: Bearer <your_token>
 
 ### 4. Logout
-    Endpoint: POST /api/auth/logout
+    - Endpoint: POST /api/auth/logout
 
-    Headers:
+    - Headers:
         Authorization: Bearer <your_token>
 
 ### 5. Update Role
 
-    Endpoint: PUT /api/auth/update-role/:username
+    - Endpoint: PUT /api/auth/update-role/:username
 
-    Headers:
+    - Headers:
         Authorization: Bearer <your_token>
-    Body:
-        {
-        "role": "admin"
-        }
-
+        
+    - Body:
+         {
+         "role": "admin"
+         }
 
 ### 6. Access Protected Routes
 
-    Endpoint: GET /api/auth/admin-dashboard
+    - Endpoint: GET /api/auth/admin-dashboard
 
-    Headers:   
-   
-    Authorization: Bearer <your_token>
+    - Headers:      
+       Authorization: Bearer <your_token>
 
 ### 7. View Reports
-    Endpoint: GET /api/auth/view-reports
+    - Endpoint: GET /api/auth/view-reports
 
-    Headers:
+    - Headers:
         Authorization: Bearer <your_token>
 
 
