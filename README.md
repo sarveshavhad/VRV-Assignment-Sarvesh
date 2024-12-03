@@ -95,7 +95,8 @@ You can use Postman or a similar API client to test the API endpoints. Ensure to
 ### 1. Register a User
     Endpoint: POST /api/auth/register
 
-    Body:     
+    Body:
+    ```JSON
     {
       "username": "testuser",
       "password": "password123",
