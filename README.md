@@ -93,9 +93,9 @@ You can use Postman or a similar API client to test the API endpoints. Ensure to
 
 ## Usage with Postman
 ### 1. Register a User
-    - Endpoint: POST /api/auth/register
+     Endpoint: POST /api/auth/register
 
-    - Body:   
+     Body:   
          {
          "username": "testuser",
          "password": "password123",
@@ -103,9 +103,9 @@ You can use Postman or a similar API client to test the API endpoints. Ensure to
          }
       
 ### 2. Login
-    - Endpoint: POST /api/auth/login  
+     Endpoint: POST /api/auth/login  
 
-    - Body: 
+     Body: 
          {
            "username": "testuser",
            "password": "password123"
@@ -118,34 +118,34 @@ You can use Postman or a similar API client to test the API endpoints. Ensure to
         Authorization: Bearer <your_token>
 
 ### 4. Logout
-    - Endpoint: POST /api/auth/logout
+     Endpoint: POST /api/auth/logout
 
-    - Headers:
+     Headers:
         Authorization: Bearer <your_token>
 
 ### 5. Update Role
 
-    - Endpoint: PUT /api/auth/update-role/:username
+     Endpoint: PUT /api/auth/update-role/:username
 
-    - Headers:
+     Headers:
         Authorization: Bearer <your_token>
         
-    - Body:
+     Body:
          {
          "role": "admin"
          }
 
 ### 6. Access Protected Routes
 
-    - Endpoint: GET /api/auth/admin-dashboard
+     Endpoint: GET /api/auth/admin-dashboard
 
-    - Headers:      
+     Headers:      
        Authorization: Bearer <your_token>
 
 ### 7. View Reports
-    - Endpoint: GET /api/auth/view-reports
+     Endpoint: GET /api/auth/view-reports
 
-    - Headers:
+     Headers:
         Authorization: Bearer <your_token>
 
 
