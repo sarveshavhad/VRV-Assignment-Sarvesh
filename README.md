@@ -1,4 +1,4 @@
-# Role-Based Access Control (RBAC) Authentication System Backend
+# VRV-Assignment-Backend
 
 This is the backend implementation of an authentication system with Role-Based Access Control (RBAC), including user registration, login, logout, token management, and role-based permissions.
 
